@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <ons-page>
+    <ons-toolbar>
+      <div class="center">お問い合わせ</div>
+      <div class="right">
+        <ons-toolbar-button>
+          <ons-icon icon="ion-navicon, material: md-menu"></v-ons-icon>
+        </ons-toolbar-button>
+      </div>
+    </ons-toolbar>
+    <div style="text-align: center; padding-top:10px">お問い合わせ内容を入力してください</div>
+    <p style="text-align: center;">
+      <ons-input style="width: 40%" id="name" placeholder="名前" />
+    </p>
+    <p style="text-align: center;">
+      <ons-input style="width: 40%" id="email" placeholder="メールアドレス" />
+    </p>
+    <p style="text-align: center;">
+      <ons-select style="width: 40%" id="option">
+        <option>不具合</option>
+        <option>操作について</option>
+        <option>その他</option>
+      </ons-select>
+    </p>
+    <p style="text-align: center;">
+      <textarea style="width: 40%" cols="50" rows="5" id="body"></textarea>
+    </p>
+    <p style="text-align: center">
+      <ons-button id="send">送信する！</v-ons-button>
+    </p>
+  </ons-page>
+  
+  <ons-dialog id="dialog">
+    <div style="text-align: center; padding: 10px;">
+      <p id="message">
+      </p>
+      <p>
+        <ons-button id="closeDialog">OK</ons-button>
+      </p>
+    </div>
+  </ons-dialog>
+</body>
+</html>
